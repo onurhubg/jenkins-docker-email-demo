@@ -1,14 +1,14 @@
-dockerfile
+# Temel imaj olarak Python'un bir versiyonunu kullanıyoruz
+FROM python:3.9-slim
 
-Skopiuj kod
-FROM python:3.8-slim
-
+# Çalışma dizinini ayarlıyoruz
 WORKDIR /app
 
-COPY . /app
+# Gerekli dosyaları container'a kopyalıyoruz
+COPY . .
 
+# Gerekli Python paketlerini yüklüyoruz
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 5000
-
-CMD ["python", "app.py"]
+# Container içinde çalıştırılacak komut
+CMD ["python", "script.py"]
