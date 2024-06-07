@@ -1,0 +1,4 @@
+makefile
+
+Skopiuj kod
+Flask==2.0.1
